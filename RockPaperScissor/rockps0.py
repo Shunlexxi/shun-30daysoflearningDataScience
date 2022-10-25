@@ -1,22 +1,14 @@
-#version 1
+#version 0
 import random
-
-def aesthetics():
-    print('----------------------------------------------------------------')
 
 print('Welcome! This is Rock Paper Scissor Game')
 
-aesthetics()
-
 #rps declaration
 def rps():
+    keep_playing = True
 
-    lives = int(input('Please, enter the no of time(s) you would love to play [Numbers only]: '))
-       
-    aesthetics()
-
-    while lives > 0:
-        player_input = input("PLAYING: Enter r, p or s for Rock, Paper or Scissor: ")
+    while keep_playing is True:
+        player_input = input("Please, enter r, p or s for Rock, Paper or Scissor: ")
         possible_actions = ['r', 'p', 's']
         computer_input = random.choice(possible_actions)
 
@@ -30,25 +22,26 @@ def rps():
         elif player_input.lower() == 'r':
             if computer_input == 's':
                 print('Rock smashes Scissor, you win!')
-            else:
-                print('Paper covers Rock, Computer wins!')
+            print('Paper covers Rock, Computer wins!')
         
         elif player_input.lower() == 'p':
             if computer_input == 'r':
                 print('Paper covers Rock, you win!')
-            else:
-                print('Scissor cuts paper, Computer wins!')
+            print('Scissor cuts paper, Computer wins!')
         
         elif player_input.lower() == 's':
             if computer_input == 'p':
                 print('Scissor cuts Paper, you win!')
-            else:
-                print('Rock smashes Scissor, Computer wins!')
-            
-        aesthetics()
-        #subtract live
-        lives -= 1
-    
-    print('Bye for now, hope to see you soon!')
+            print('Rock smashes Scissor, Computer wins!')
 
+
+        choice = input("Would you like to keep playing? [y/n]: ")
+
+        if choice.lower() == 'y':
+            keep_playing = True
+        
+        elif choice.lower() == 'n':
+            keep_playing = False
+
+        print('Bye for now, hope to see you soon!')
 rps()

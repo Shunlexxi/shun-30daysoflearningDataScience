@@ -1,1 +1,1 @@
-#This is an implementation of Rock Paper Scissor Game
+#This is my implementation of Rock Paper Scissor Game

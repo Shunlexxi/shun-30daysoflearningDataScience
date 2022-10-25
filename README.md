@@ -1,2 +1,2 @@
 # shun-30daysoflearningDataScience
-My codes/solutions for #30DaysOfLearningDataScience
+My codes/solutions for #30DaysOfDataScience
